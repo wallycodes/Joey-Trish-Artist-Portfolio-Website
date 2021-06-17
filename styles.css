@@ -286,6 +286,7 @@ a:hover {
 /* goodDollar popup */
 .goodDollarPopup{
   overflow: auto;
+  pading: 10px;
 }
 
 /*
