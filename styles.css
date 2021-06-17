@@ -1,0 +1,320 @@
+html {
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  opacity: 0;
+  transition: opacity 1.5s;
+  font-family: 'Karla', sans-serif;
+}
+
+a {
+  color: #f0f;
+}
+
+/* BLUR WHEN ACTIVE POPUP */
+.allPics#blur.active {
+  filter: blur(20px) grayscale(1);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ABOUT POPUP */
+#popup, #popupbigeye, #goodDollarPopup, #epicTravelPopup {
+  /* position: fixed;
+  top: 6%;
+  left: 75%; */
+  background-color: #fff;
+  z-index: 10;
+  /* width: 600px; */
+  max-width: 850px;
+  /* min-height: 100%; */
+  /* width: 100%; */
+  height: 100%;
+  padding: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+}
+#popupbigeye {
+  /* position: fixed;
+  top: 6%;
+  left: 75%; */
+  background-color: #fff;
+  z-index: 10;
+  /* width: 600px; */
+  max-width: 850px;
+  height: 100%;
+  /* width: 100%; */
+  padding: 50px;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+}
+#epicTravelPopup.active {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s;
+  /* left:55%; */
+}
+
+#popupbigeye.active {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s;
+  /* left:55%; */
+}
+
+#goodDollarPopup.active {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s;
+  /* left:55%; */
+}
+
+@media only screen and (max-width: 925px){
+  #popup{
+    height: auto;
+    width:100%;
+  }
+  .joeyTrishArtist{
+    height: auto;
+    width: auto;
+  }
+
+}
+
+#popup.active {
+  visibility: visible;
+  opacity: 1;
+  transition: .5s;
+  /* left:55%; */
+}
+
+.popupTitle {
+  padding: 0px 0 20px;
+}
+
+.fa {
+  display: flex !important;
+  justify-content: flex-end;
+}
+
+.joeyTrishArtist {
+  max-width: 100%;
+  /* margin: 20px auto; */
+}
+
+.joeyEmailLink {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo {
+  justify-content: flex-start;
+  font-family: 'karla', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #111;
+}
+
+.main-nav {
+  padding-top: 20px;
+  padding-left: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-top: 20px;
+}
+
+li {
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  color: #999;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: #999;
+}
+
+/*EFFECTS*/
+a:hover {
+  color: #111;
+}
+
+/* WORDS INSIDE OF HOVER */
+.title {
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.wrapper, .box1 {
+  position: relative;
+}
+
+/*OVERLAY*/
+.overlay {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background: #212529a6;
+}
+
+.wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.box, .box1{
+  width: 100%;
+  height: auto;
+}
+
+.thumbGrid {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  grid-gap: auto;
+}
+
+@media only screen and (max-width: 840px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo {
+    padding-top: 20px;
+  }
+
+  .mainPage {
+    padding: 0;
+  }
+  .bigeyepDiv{
+    padding-left: 0;
+  }
+
+
+}
+
+/* BIGEYE POPUP */
+.popupBigeye{
+  background: white;
+  background-size: cover;
+  max-height: auto;
+  overflow: auto;
+  /* min-height: 10000px; */
+  /* min-height: 100%; */
+}
+.bigeyeTitle{
+  padding-bottom: 40px;
+  font-size: 27px;
+}
+.bigeyeSmP{
+  /* margin: 0px 50px; */
+  line-height: 2;
+  font-size: 14px;
+  color: #909090;
+
+}
+.bigeyepDiv{
+
+}
+
+.bigeyeLgP{
+  line-height: 1.65;
+  font-size: 17px;
+}
+.popupImages{
+  max-width: 100%;
+  margin: 20px auto;
+  /* position: relative; */
+}
+
+@media only screen and (max-width: 350px) {
+  li {
+    font-size: .5rem;
+    padding: 5px;
+  }
+
+  .thumbGrid {
+    grid-template-columns: 1fr;
+    height: auto;
+    display: grid;
+    margin: 0 auto;
+    grid-gap: auto;
+  }
+
+
+}
+/* goodDollar popup */
+.goodDollarPopup{
+  overflow: auto;
+}
+
+/*
+@media only screen and (max-width: 1920px){
+  .thumbGrid{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1200px){
+  .thumbGrid{
+    width: 33.33%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .thumbGrid{
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+
+  }
+}
+@media only screen and (max-width: 500px){
+  .thumbGrid{
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+
+  }
+} */
