@@ -1,9 +1,28 @@
+.epicTravelSmP, .bigeyeSmP, .goodDollarSmP {
+  font-size: 14px;
+  color: #909090;
+  line-height: 2;
+}
+
+.aboutTitle, .bigeyeTitle, .goodDollarTitle, .epicTravelTitle {
+  padding-bottom: 40px;
+  font-size: 27px;
+}
+
+.goodDollarPopup, .epicTravelPopup, .popupBigeye {
+  background: white;
+  background-size: cover;
+  max-height: auto;
+  overflow: auto;
+}
+
 html {
   font-family: 'Karla', sans-serif;
 }
 
 body {
   opacity: 0;
+  -webkit-transition: opacity 1.5s;
   transition: opacity 1.5s;
   font-family: 'Karla', sans-serif;
 }
@@ -14,9 +33,13 @@ a {
 
 /* BLUR WHEN ACTIVE POPUP */
 .allPics#blur.active {
-  filter: blur(20px) grayscale(1);
+  -webkit-filter: blur(20px) grayscale(1);
+          filter: blur(20px) grayscale(1);
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* ABOUT POPUP */
@@ -34,13 +57,14 @@ a {
   padding: 50px;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: .5s;
   transition: .5s;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
-
 }
+
 #popupbigeye {
   /* position: fixed;
   top: 6%;
@@ -54,16 +78,18 @@ a {
   padding: 50px;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: .5s;
   transition: .5s;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
-
 }
+
 #epicTravelPopup.active {
   visibility: visible;
   opacity: 1;
+  -webkit-transition: .5s;
   transition: .5s;
   /* left:55%; */
 }
@@ -71,6 +97,7 @@ a {
 #popupbigeye.active {
   visibility: visible;
   opacity: 1;
+  -webkit-transition: .5s;
   transition: .5s;
   /* left:55%; */
 }
@@ -78,41 +105,37 @@ a {
 #goodDollarPopup.active {
   visibility: visible;
   opacity: 1;
+  -webkit-transition: .5s;
   transition: .5s;
   /* left:55%; */
 }
 
-@media only screen and (max-width: 925px){
-  #popup{
+@media only screen and (max-width: 925px) {
+  #popup {
     height: auto;
-    width:100%;
+    width: 100%;
   }
-  .joeyTrishArtist{
+  .joeyTrishArtist {
     height: auto;
     width: auto;
   }
-
 }
 
 #popup.active {
   visibility: visible;
   opacity: 1;
+  -webkit-transition: .5s;
   transition: .5s;
   /* left:55%; */
 }
 
-.popupTitle {
-  padding: 0px 0 20px;
-}
-
 .fa {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
-  justify-content: flex-end;
-}
-
-.joeyTrishArtist {
-  max-width: 100%;
-  /* margin: 20px auto; */
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .joeyEmailLink {
@@ -121,11 +144,14 @@ a {
 }
 
 .logo {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   font-family: 'karla', sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   color: #111;
+  padding-top: 20px;
 }
 
 .main-nav {
@@ -134,12 +160,12 @@ a {
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-}
-
-.logo {
-  padding-top: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 li {
@@ -157,7 +183,7 @@ li {
 }
 
 /*EFFECTS*/
-a:hover {
+.overlay:hover {
   color: #111;
 }
 
@@ -167,9 +193,15 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); */
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   color: #fff;
   font-size: 25px;
@@ -183,6 +215,8 @@ a:hover {
 /*OVERLAY*/
 .overlay {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   top: 0;
   left: 0;
@@ -191,6 +225,7 @@ a:hover {
   height: 100%;
   width: 100%;
   opacity: 0;
+  -webkit-transition: .3s ease;
   transition: .3s ease;
   background: #212529a6;
 }
@@ -199,74 +234,57 @@ a:hover {
   opacity: 1;
 }
 
-.box, .box1{
+.box, .box1 {
   width: 100%;
   height: auto;
 }
 
 .thumbGrid {
+  display: -ms-grid;
   display: grid;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  -ms-grid-columns: (minmax(400px, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
   grid-gap: auto;
 }
 
 @media only screen and (max-width: 840px) {
   nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .logo {
     padding-top: 20px;
   }
-
   .mainPage {
     padding: 0;
   }
-  .bigeyepDiv{
+  .bigeyepDiv {
     padding-left: 0;
   }
-
-
 }
 
 /* BIGEYE POPUP */
-.popupBigeye{
-  background: white;
-  background-size: cover;
-  max-height: auto;
-  overflow: auto;
-  /* min-height: 10000px; */
-  /* min-height: 100%; */
-}
-.bigeyeTitle{
-  /* padding-bottom: 40px;
-  font-size: 27px; */
-}
-.bigeyeSmP{
-  /* margin: 0px 50px; */
-  line-height: 2;
-  font-size: 14px;
-  color: #909090;
-}
-
-.bigeyepDiv{
-
-}
-
-.bigeyeLgP{
+.bigeyeLgP {
   line-height: 1.65;
   font-size: 17px;
 }
-.popupImages{
+
+.popupImages {
   max-width: 100%;
   margin: 20px auto;
   height: auto;
-
-  /* position: relative; */
 }
 
 @media only screen and (max-width: 350px) {
@@ -274,24 +292,16 @@ a:hover {
     font-size: .5rem;
     padding: 5px;
   }
-
   .thumbGrid {
-    grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     height: auto;
+    display: -ms-grid;
     display: grid;
     margin: 0 auto;
     grid-gap: auto;
   }
-
-
 }
+
 /* goodDollar popup */
-.goodDollarPopup{
-  overflow: auto;
-  background: white;
-  background-size: cover;
-  max-height: auto;
-}
-.goodDollarTitle{
-  padding-bottom: 40px;
-}
+/*# sourceMappingURL=main.css.map */
